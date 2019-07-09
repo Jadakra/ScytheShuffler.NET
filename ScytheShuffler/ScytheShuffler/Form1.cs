@@ -21,9 +21,9 @@ namespace ScytheShuffler
         {
             Results.Text = "";
             int numberOfPlayers = Convert.ToInt32(Players.SelectedItem);
-            int minF = 1, maxF = 5, minP = 1, maxP = 5;
+            int minF = 1, maxF = 6, minP = 1, maxP = 6;
             //int[] usedFactions = new int[numberOfPlayers];
-            int[] usedFactions = new int[5] { -1, -1, -1, -1, -1 };
+            int[] usedFactions = new int[numberOfPlayers];
             int[] usedPlaymats = new int[numberOfPlayers];
             for (int i = 1; i <= numberOfPlayers; i++)
             {
@@ -34,7 +34,7 @@ namespace ScytheShuffler
                     newRandomFaction = RandomNumber(minF, maxF);
                     if (Array.IndexOf(usedFactions, minF) != -1)
                     { minF++; }
-                    if (Array.IndexOf(usedFactions, maxF) != -1)
+                    if (Array.IndexOf(usedFactions, maxF-1) != -1)
                     { maxF--; }
                 }
                 usedFactions[i - 1] = newRandomFaction;
@@ -44,16 +44,11 @@ namespace ScytheShuffler
                     newRandomPlaymat = RandomNumber(minP, maxP);
                     if (Array.IndexOf(usedPlaymats, minP) != -1)
                     { minP++; }
-                    if (Array.IndexOf(usedPlaymats, maxP) != -1)
+                    if (Array.IndexOf(usedPlaymats, maxP-1) != -1)
                     { maxP--; }
                 }
                 usedPlaymats[i - 1] = newRandomPlaymat;
-                //Consigue dos listados igual al numero de jugadores
-                //Que dentro del listado individual no haya repeticiones
-                //Asigna esos numeros a los arreglos
-
                 Results.Text += Factions[newRandomFaction - 1] + "," + PlayMats[newRandomPlaymat - 1] + Environment.NewLine;
-                //Results.Text += randomFaction + "," + randomPlayMat + Environment.NewLine;
             }
 
 

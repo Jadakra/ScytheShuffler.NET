@@ -36,7 +36,7 @@
             // DoItButton
             // 
             this.DoItButton.AutoSize = true;
-            this.DoItButton.Location = new System.Drawing.Point(269, 370);
+            this.DoItButton.Location = new System.Drawing.Point(13, 370);
             this.DoItButton.Name = "DoItButton";
             this.DoItButton.Size = new System.Drawing.Size(75, 23);
             this.DoItButton.TabIndex = 0;
@@ -49,7 +49,7 @@
             this.Results.Location = new System.Drawing.Point(13, 13);
             this.Results.Multiline = true;
             this.Results.Name = "Results";
-            this.Results.Size = new System.Drawing.Size(713, 329);
+            this.Results.Size = new System.Drawing.Size(211, 329);
             this.Results.TabIndex = 1;
             // 
             // Players
@@ -60,7 +60,7 @@
             "3",
             "4",
             "5"});
-            this.Players.Location = new System.Drawing.Point(588, 372);
+            this.Players.Location = new System.Drawing.Point(103, 372);
             this.Players.Name = "Players";
             this.Players.Size = new System.Drawing.Size(121, 21);
             this.Players.TabIndex = 3;
@@ -70,7 +70,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(257, 450);
             this.Controls.Add(this.Players);
             this.Controls.Add(this.Results);
             this.Controls.Add(this.DoItButton);
